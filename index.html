@@ -2,60 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayank Kumar - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Mayank Kumar - Computer Science Student & Developer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="#home">Portfolio</a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a style="font-weight: 900;" "#home">Portfolio</a>
             </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Mayank Kumar.</span></h1>
-                <h2>Web Developer & Designer</h2>
-                <p>I create beautiful and functional websites with a focus on user experience.</p>
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Mayank Kumar</span></h1>
+                <h2 class="typing-text" id="typing-text"></h2>
+                <p class="hero-subtitle">Passionate about algorithms, web development, and creating innovative solutions</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-                <div class="social-icons">
-                    <a href="https://github.com/mackcodes" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/mackcodes" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:mackcodes03@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="#projects" class="btn btn--primary">View Projects</a>
+                    <a href="#contact" class="btn btn--outline">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="image-container">
-                    <img src="/assets/temp-profile.jpg" alt="Profile Image">
+                <div class="avatar-placeholder">
+                    <i class="fas fa-user"></i>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -64,22 +74,35 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <!-- <div class="about-image">
-                    <img src="https://via.placeholder.com/400" alt="About Me Image">
-                </div> -->
                 <div class="about-text">
-                    <h3>Who am I?</h3>
-                    <p>I'm a passionate web developer with a strong foundation in HTML, CSS, and JavaScript. I enjoy creating responsive and user-friendly websites that provide great user experiences.</p>
-                    
-                    <h3>My Experience</h3>
-                    <p>As such I have no industy experience as I am a student but I am working on many project-tags. I'm constantly learning and improving my skills to stay up-to-date with the latest technologies.</p>
-                    
-                    <h3>Education & Background</h3>
-                    <p>I am enrolled in Bachelor's of Technology degree in Computer Science and Engineering from Dr. A.P.J. Abdul Kalam Technical University. My educational background, combined with practical experience, has equipped me with the skills needed to tackle complex web development challenges.</p>
-                    
-                    <div class="about-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="./assets/mayank-resume.pdf" class="btn btn-secondary" download>Resume</a>
+                    <p class="about-description">
+                        I'm a dedicated computer science student with a passion for problem-solving and software development. 
+                        Currently in my pre-final year, I've been actively involved in competitive programming and web development projects. 
+                        I enjoy creating efficient algorithms and building user-friendly applications that solve real-world problems.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>Bachelor of Technology - Computer Science & Engineering</p>
+                                <span>Pre-final Year (2026)</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Greater Noida, India</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>mackcodes03@gmail.com</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,107 +111,152 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title">Skills & Technologies</h2>
+    <div class="skills-grid">
+
+      <!-- Programming Languages -->
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <div class="skill-items">
+          <div class="skill-item"><span class="skill-name">HTML/CSS</span></div>
+          <div class="skill-item"><span class="skill-name">JavaScript</span></div>
+          <div class="skill-item"><span class="skill-name">C</span></div>
+          <div class="skill-item"><span class="skill-name">Python</span></div>
+          <div class="skill-item"><span class="skill-name">C++</span></div>
+          <div class="skill-item"><span class="skill-name">Java</span></div>
+        </div>
+      </div>
+
+      <!-- Frameworks / Libraries -->
+      <div class="skill-category">
+        <h3>Frameworks / Libraries</h3>
+        <div class="skill-items">
+          <div class="skill-item"><span class="skill-name">Bootstrap</span></div>
+          <div class="skill-item"><span class="skill-name">React</span></div>
+          <div class="skill-item"><span class="skill-name">Node.js</span></div>
+          <div class="skill-item"><span class="skill-name">Express.js</span></div>
+          <div class="skill-item"><span class="skill-name">Next.js</span></div>
+          <div class="skill-item"><span class="skill-name">Tailwind CSS</span></div>
+          <!-- <div class="skill-item"><span class="skill-name">jQuery</span></div> -->
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-category">
+        <h3>Tools</h3>
+        <div class="skill-items">
+          <div class="skill-item"><span class="skill-name">VS Code</span></div>
+          <div class="skill-item"><span class="skill-name">Git & GitHub</span></div>
+          <div class="skill-item"><span class="skill-name">MySQL</span></div>
+          <div class="skill-item"><span class="skill-name">MongoDB</span></div>
+          <div class="skill-item"><span class="skill-name">Postman</span></div>
+          <div class="skill-item"><span class="skill-name">Docker</span></div>
+          <!-- <div class="skill-item"><span class="skill-name">Figma</span></div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Frontend Development</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                            <h4>HTML5</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div> -->
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="educational">Educational</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="Programming Contest Platform">
+                        <div class="project-overlay">
+                            <button class="btn btn--primary" onclick="openModal(1)">View Details</button>
+                            <a href="https://github.com/alexjohnson/contest-platform" target="_blank" class="btn btn--outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                            <h4>CSS3</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div> -->
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-js"></i></div>
-                            <h4>JavaScript</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div> -->
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-react"></i></div>
-                            <h4>React</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div> -->
+                    </div>
+                    <div class="project-content">
+                        <h3>Programming Contest Platform</h3>
+                        <p>A comprehensive web platform for organizing and participating in coding competitions with real-time judging, leaderboards, and problem management.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Socket.io</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Backend Development</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-                            <h4>Node.js</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div> -->
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Personal Portfolio Website">
+                        <div class="project-overlay">
+                            <button class="btn btn--primary" onclick="openModal(2)">View Details</button>
+                            <a href="https://github.com/alexjohnson/portfolio" target="_blank" class="btn btn--outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h4>MongoDB</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div> -->
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-server"></i></div>
-                            <h4>Express</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div> -->
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h4>SQL</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%"></div>
-                            </div> -->
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>A responsive and modern portfolio website built with the latest web technologies, featuring dark mode, smooth animations, and interactive elements.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>SCSS</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                            <h4>Git</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div> -->
+
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop" alt="Task Management App">
+                        <div class="project-overlay">
+                            <button class="btn btn--primary" onclick="openModal(3)">View Details</button>
+                            <a href="https://github.com/alexjohnson/task-manager" target="_blank" class="btn btn--outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-figma"></i></div>
-                            <h4>Figma</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div> -->
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A full-stack task management application with features for project organization, team collaboration, and progress tracking.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Express.js</span>
+                            <span>PostgreSQL</span>
+                            <span>Redux</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
-                            <h4>Responsive Design</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div> -->
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="educational">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Algorithm Visualizer">
+                        <div class="project-overlay">
+                            <button class="btn btn--primary" onclick="openModal(4)">View Details</button>
+                            <a href="https://github.com/alexjohnson/algorithm-visualizer" target="_blank" class="btn btn--outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-universal-access"></i></div>
-                            <h4>Accessibility</h4>
-                            <!-- <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div> -->
+                    </div>
+                    <div class="project-content">
+                        <h3>Algorithm Visualizer</h3>
+                        <p>An interactive web application for visualizing sorting and searching algorithms with step-by-step animations and educational content.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5 Canvas</span>
+                            <span>CSS3</span>
+                            <span>Chart.js</span>
                         </div>
                     </div>
                 </div>
@@ -196,91 +264,47 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <!-- <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3>E-Commerce Website</h3>
-                        <p>A fully responsive e-commerce platform built with HTML, CSS, and JavaScript. Features include product filtering, cart functionality, and user authentication.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div> -->
-                
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Portfolio Website</h3>
-                        <p>A clean and modern portfolio website showcasing my work and skills. Built with HTML, CSS, and JavaScript with a focus on performance and accessibility.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> Code</a>
-                        </div>
+            <h2 class="section-title">Experience & Achievements</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Programming Contest Organizer</h3>
+                        <h4>College</h4>
+                        <span class="timeline-date">2024</span>
+                        <p>Organized and managed C programming coding competitions for 1st and 2nd year BTech CSE students, including problem creation, contest setup, and evaluation.</p>
                     </div>
                 </div>
-                
-                <!-- Project 3 -->
-                <!-- <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Problem Setter</h3>
+                        <h4>Programming Club</h4>
+                        <span class="timeline-date">2023-2024</span>
+                        <p>Created medium-difficulty C programming problems with clear descriptions, constraints, and I/O examples for competitive programming contests.</p>
                     </div>
-                    <div class="project-info">
-                        <h3>Weather App</h3>
-                        <p>A weather application that fetches real-time weather data from an API. Users can search for weather information by city name or use geolocation.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Web Development Projects</h3>
+                        <h4>Personal</h4>
+                        <span class="timeline-date">2023-Present</span>
+                        <p>Developed multiple web applications including portfolio websites, task management systems, and educational tools using modern frameworks.</p>
                     </div>
-                </div> -->
-                
-                <!-- Project 4 -->
-                <!-- <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 4">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Competitive Programming</h3>
+                        <h4>Various Platforms</h4>
+                        <span class="timeline-date">2022-Present</span>
+                        <p>Active participant in competitive programming contests, solving algorithmic problems and improving problem-solving skills.</p>
                     </div>
-                    <div class="project-info">
-                        <h3>Task Manager</h3>
-                        <p>A task management application with features like task creation, deletion, and status updates. Data is stored in local storage for persistence.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
@@ -291,112 +315,61 @@
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Feel free to reach out to me through any of these channels. I'll get back to you as soon as possible.</p>
-                    
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always interested in discussing new opportunities, innovative projects, and collaborations. Feel free to reach out!</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <a href="mailto:your.email@example.com">mackcodes03@gmail.com</a>
-                            </div>
+                            <i class="fas fa-envelope"></i>
+                            <span>mackcodes03@gmail.com</span>
                         </div>
-                        
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>LinkedIn</h4>
-                                <a href="https://linkedin.com/in/mackcodes" target="_blank">linkedin.com/in/mackcodes</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>GitHub</h4>
-                                <a href="https://github.com/mackcodes" target="_blank">github.com/mackcodes</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>Greater Noida, India</p>
-                            </div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Greater Noida, India</span>
                         </div>
                     </div>
+                    <div class="social-links">
+                        <a href="https://github.com/mackcodes" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/mackcodes" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/macktweet_" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:wrk.mayank@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-                
-                <div class="contact-form">
-                    <h3>Send Me a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#home">Portfolio</a>
-                </div>
-                
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-social">
-                    <a href="https://github.com/mackcodes" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/mackcodes" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:mackcodes03@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Mayank Kumar. All Rights Reserved.</p>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Modal -->
+    <div class="modal hidden" id="project-modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modal-body">
+                <!-- Project details will be inserted here -->
             </div>
         </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
