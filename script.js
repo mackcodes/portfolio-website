@@ -105,25 +105,35 @@ function toggleMobileMenu() {
 }
 
 // Theme toggle - Fixed implementation
-function toggleTheme() {
-    const html = document.documentElement;
-    const themeToggle = document.getElementById('theme-toggle');
-    const icon = themeToggle ? themeToggle.querySelector('i') : null;
-    
-    if (!icon) return;
-    
-    const currentTheme = html.getAttribute('data-color-scheme');
-    
-    if (currentTheme === 'dark' || (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        html.setAttribute('data-color-scheme', 'light');
-        icon.className = 'fas fa-moon';
-        localStorage.setItem('theme', 'light');
-    } else {
-        html.setAttribute('data-color-scheme', 'dark');
-        icon.className = 'fas fa-sun';
-        localStorage.setItem('theme', 'dark');
-    }
-}
+
+// JS: apply theme using the checkbox state, persist to localStorage
+document.addEventListener("DOMContentLoaded", () => {
+  const html = document.documentElement;
+  const toggle = document.getElementById("theme-toggle");
+
+  function applyTheme(theme) {
+    html.setAttribute("data-color-scheme", theme);
+    localStorage.setItem("theme", theme);
+    if (toggle) toggle.checked = theme === "dark";
+  }
+
+  // initialize from saved theme or system preference
+  const saved = localStorage.getItem("theme");
+  if (saved) {
+    applyTheme(saved);
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    applyTheme(prefersDark ? "dark" : "light");
+  }
+
+  // listener
+  if (toggle) {
+    toggle.addEventListener("change", () => {
+      applyTheme(toggle.checked ? "dark" : "light");
+    });
+  }
+});
+
 
 // Smooth scrolling for navigation links - Fixed implementation
 function smoothScroll(target) {
